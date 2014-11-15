@@ -1,0 +1,44 @@
+{
+	"name" : "techdivision/dependencyinjectioncontainer",
+	"description" : "A dependency injection container to handle annotation based DI in an application server like appserver.io.",
+	"homepage" : "https://github.com/techdivision/TechDivision_DependencyInjectionContainer",
+	"license" : "OSL-3.0",
+	"require" : {
+		"php" : ">=5.4.0",
+		"techdivision/naming" : "0.1.*",
+		"techdivision/storage" : "0.5.*",
+		"techdivision/application" : "0.3.*"
+	},
+	"require-dev" : {
+        "nikic/phlexy" : "dev-master",
+		"appserver-io/build" : "0.1.*"
+	},
+	"autoload" : {
+		"psr-0" : {
+			"TechDivision\\TechDivision_DependencyInjectionContainer" : [
+				"src/",
+				"tests/"
+			]
+		}
+	},
+	"config" : {
+		"github-oauth" : {
+			"github.com" : "604a3b5943228e434a5b52c2ba3cf72286d30db9"
+		}
+	},
+	"authors" : [{
+			"name" : "Tim Wagner",
+			"email" : "t.wagner@techdivision.com",
+			"homepage" : "https://github.com/wagnert",
+			"role" : "Developer"
+		}
+	],
+	"support" : {
+		"email" : "t.wagner@techdivision.com",
+		"issues" : "https://github.com/techdivision/TechDivision_DependencyInjectionContainer/issues",
+		"source" : "https://github.com/techdivision/TechDivision_DependencyInjectionContainer"
+	},
+	"keywords" : [
+		"di dependency injection container provider"
+	]
+}
