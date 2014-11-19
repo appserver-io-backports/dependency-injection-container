@@ -55,9 +55,6 @@ class ProviderFactory
     public static function visit(ApplicationInterface $application, ManagerConfigurationInterface $managerConfiguration)
     {
 
-        // bind the application specific temporary directory to the naming directory
-        $namingDirectory = $application->getNamingDirectory();
-
         // create the initial context instance
         $initialContext = new NamingContext();
         $initialContext->injectApplication($application);
@@ -68,10 +65,10 @@ class ProviderFactory
         // create and initialize the DI provider instance
         $provider = new Provider();
         $provider->injectInitialContext($initialContext);
-        $provider->injectNamingDirectory($namingDirectory);
+        $provider->injectNamingDirectory($application);
         $provider->injectNamingDirectoryAliases($namingDirectoryAliases);
 
         // attach the instance
-        $application->addManager($provider);
+        $application->addManager($provider, $managerConfiguration);
     }
 }

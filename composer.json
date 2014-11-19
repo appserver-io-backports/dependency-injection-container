@@ -7,10 +7,11 @@
 		"php" : ">=5.4.0",
 		"techdivision/naming" : "0.1.*",
 		"techdivision/storage" : "0.5.*",
-		"techdivision/application" : "0.3.*"
+		"techdivision/application" : "0.3.*",
+        "techdivision/enterprisebeans" : "0.1.*"
 	},
 	"require-dev" : {
-        "nikic/phlexy" : "dev-master",
+		"nikic/phlexy" : "dev-master",
 		"appserver-io/build" : "0.1.*"
 	},
 	"autoload" : {
